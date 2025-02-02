@@ -97,6 +97,8 @@
             transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
             white-space: pre-line;
             text-align: left;
+            max-height: 60vh; /* Adjust this value as needed */
+            overflow-y: auto; /* Adds scroll when the content exceeds the max-height */
         }
 
         .opened .envelope {
@@ -144,7 +146,7 @@
     <div class="envelope-container" onclick="toggleEnvelope(event)">
         <div class="envelope"></div>
         <div class="seal">❤</div>
-        <div class="letter">💌 Dear Farhana, <br> Happy Birthday 🎂 to my jellyfish 🪼 my kaju badam. On this the best gift of my life has come to the earth 🌎. I wish all you want in life Allah fulfill your wishes, Allah always keep you healthy. I love your anger, your smile and I want to see them for ever for full life 😍. My shoulder is always available whenever you need me. I will love you forever. I am promising you I will work hard and will marry you in sha allah 🤲🏻 this is my gift for you on your birthday. I can't tell how much I love you ❤. You make me man from a boy. You are the water 🌊 if did not get it I can't grow 🪴. Thank you for all and thanks to Allah. I promise you my love, care, affection will never be less. I will love 💕 you more and more. I wish Allah give you all the happiness all the joy all the peace you want. I love you Sk Farhana 💕. Happy birthday Babi 😘 and Allah will make you more happy in sha Allah.</div>
+        <div class="letter">💌 Dear Farhana, <br> Happy Birthday 🎂 to my jellyfish 🪼 my kaju badam. On this the best gift of my life has come to the earth 🌎. I wish all you want in life Allah fulfills your wishes, Allah always keep you healthy. I love your anger, your smile and I want to see them for ever for full life 😍. My shoulder is always available whenever you need me. I will love you forever. I am promising you I will work hard and will marry you in sha allah 🤲🏻 this is my gift for you on your birthday. I can't tell how much I love you ❤. You make me man from a boy. You are the water 🌊 if did not get it I can't grow 🪴. Thank you for all and thanks to Allah. I promise you my love, care, affection will never be less. I will love 💕 you more and more. I wish Allah give you all the happiness all the joy all the peace you want. I love you Sk Farhana 💕. Happy birthday Babi 😘 and Allah will make you more happy in sha Allah.</div>
     </div>
     <p class="emoji-button" onclick="toggleEnvelope(event)">💌</p>
     <div class="next-page-text">
@@ -176,7 +178,7 @@
         }
 
         function nextPage() {
-            window.location.href = "nextpage.html";
+            window.location.href = "next.html";
         }
     </script>
 </body>

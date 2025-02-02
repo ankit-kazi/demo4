@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Farhana</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #ffccff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #ff6699;
+            margin-bottom: 40px;
+        }
+
+        .letter-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 50px;
+            transition: all 0.5s ease;
+        }
+
+        .letter-box {
+            width: 60px;
+            height: 60px;
+            margin: 10px;
+            background-color: #ff6699;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .letter-box:hover {
+            background-color: #ff3366;
+        }
+
+        .expand-button {
+            background-color: #ff6699;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .expand-button:hover {
+            background-color: #ff3366;
+        }
+
+        .message-container {
+            display: none;
+            margin-top: 30px;
+            text-align: left;
+            font-size: 1.2em;
+            color: #444;
+        }
+
+        .message {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .expanded {
+            display: inline-block;
+            width: 100%;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .letter-container.expanded {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .letter-box.expanded {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        /* Corrected gap between Y and B */
+        .letter-box-gap {
+            margin-right: 60px;
+        }
+
+        /* Added larger gap between Y and B */
+        .letter-box-gap2 {
+            margin-right: 120px; /* Larger gap between Y and B */
+        }
+
+        .message-line {
+            opacity: 0;
+            transform: translateX(-50%);
+            animation: expandMessage 2s forwards;
+            display: block; /* Ensure each message appears on a new line */
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .message-line:nth-child(1) {
+            animation-delay: 0.5s;
+        }
+        .message-line:nth-child(2) {
+            animation-delay: 1s;
+        }
+        .message-line:nth-child(3) {
+            animation-delay: 1.5s;
+        }
+        .message-line:nth-child(4) {
+            animation-delay: 2s;
+        }
+        .message-line:nth-child(5) {
+            animation-delay: 2.5s;
+        }
+        .message-line:nth-child(6) {
+            animation-delay: 3s;
+        }
+        .message-line:nth-child(7) {
+            animation-delay: 3.5s;
+        }
+        .message-line:nth-child(8) {
+            animation-delay: 4s;
+        }
+        .message-line:nth-child(9) {
+            animation-delay: 4.5s;
+        }
+        .message-line:nth-child(10) {
+            animation-delay: 5s;
+        }
+        .message-line:nth-child(11) {
+            animation-delay: 5.5s;
+        }
+        .message-line:nth-child(12) {
+            animation-delay: 6s;
+        }
+        .message-line:nth-child(13) {
+            animation-delay: 6.5s;
+        }
+
+        @keyframes expandMessage {
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .next-button {
+            background-color: #ff6699;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        .next-button:hover {
+            background-color: #ff3366;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Happy Birthday Farhana 🎉</h1>
+
+    <div class="letter-container" id="letter-container">
+        <div class="letter-box" id="H" onclick="expandMessage('H')">H</div>
+        <div class="letter-box" id="A" onclick="expandMessage('A')">A</div>
+        <div class="letter-box" id="P" onclick="expandMessage('P')">P</div>
+        <div class="letter-box" id="P" onclick="expandMessage('P')">P</div>
+        <div class="letter-box letter-box-gap2" id="Y" onclick="expandMessage('Y')">Y</div>
+        <!-- Larger gap between Y and B -->
+        <div class="letter-box" id="B" onclick="expandMessage('B')">B</div>
+        <div class="letter-box" id="I" onclick="expandMessage('I')">I</div>
+        <div class="letter-box" id="R" onclick="expandMessage('R')">R</div>
+        <div class="letter-box" id="T" onclick="expandMessage('T')">T</div>
+        <div class="letter-box" id="H" onclick="expandMessage('H')">H</div>
+        <div class="letter-box" id="D" onclick="expandMessage('D')">D</div>
+        <div class="letter-box" id="A" onclick="expandMessage('A')">A</div>
+        <div class="letter-box" id="Y" onclick="expandMessage('Y')">Y</div>
+    </div>
+
+    <button class="expand-button" onclick="showMessages()">Expand Messages</button>
+
+    <div class="message-container" id="message-container">
+        <div class="message">
+            <div class="message-line" id="H-message">H : Here I am for you every time you need me.</div>
+            <div class="message-line" id="A-message">A : A life without you I can't imagine.</div>
+            <div class="message-line" id="P-message1">P : Precious gift of my life is you.</div>
+            <div class="message-line" id="P-message2">P : Perfect word is only for you in every single way.</div>
+            <div class="message-line" id="Y-message">Y : You are the love of my life.</div>
+            <div class="message-line" id="B-message">B : Babi I love you.</div>
+            <div class="message-line" id="I-message">I : I am incomplete without you.</div>
+            <div class="message-line" id="R-message">R : Roses are not more beautiful than you.</div>
+            <div class="message-line" id="T-message">T : The happiness I get when I am with you I can't imagine.</div>
+            <div class="message-line" id="H-message2">H : Hours become seconds when you sit beside me.</div>
+            <div class="message-line" id="D-message">D : Darling it is you who has made me a man.</div>
+            <div class="message-line" id="A-message2">A : Attractive words are only made for you.</div>
+            <div class="message-line" id="Y-message2">Y : You are Farhana whom I love the most.</div>
+        </div>
+    </div>
+
+    <a href="next.html"><button class="next-button">Go to Next Page</button></a>
+
+    <script>
+        let messagesVisible = false;
+
+        function expandMessage(letter) {
+            // Highlight the letter box
+            const letterBox = document.querySelectorAll('.letter-box');
+            letterBox.forEach(box => {
+                if (box.id === letter) {
+                    box.style.backgroundColor = '#ff3366'; // Highlight clicked box
+                }
+            });
+        }
+
+        function showMessages() {
+            if (!messagesVisible) {
+                // Hide the expand button
+                const expandButton = document.querySelector('.expand-button');
+                expandButton.style.display = 'none';
+
+                // Show the message container
+                const messageContainer = document.getElementById('message-container');
+                messageContainer.style.display = 'block';
+                
+                // Apply animation to the messages
+                const messageLines = document.querySelectorAll('.message-line');
+                messageLines.forEach((line, index) => {
+                    line.style.animationDelay = `${index * 1.0}s`; // Adjusted animation delay
+                });
+
+                messagesVisible = true;
+            }
+        }
+    </script>
+
+</body>
+</html>
